@@ -1,12 +1,12 @@
 import React from 'react'
-import Button from './class-components';
-import { Calculator2 } from './calculator';
-import { EventData2 } from './event-data';
-import RefsFunc from './refs-func';
-import RefsArray from './refs-array';
-import MessageBox from './state-func';
+import { userContext } from './context';
+import Content from './context-content';
 
 
 export default function App(){
-    return <MessageBox/>
+    return (
+        <userContext.Provider value={'Tom Jerry'}>
+            <Content/>
+        </userContext.Provider>
+    )
 }
